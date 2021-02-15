@@ -1,0 +1,5 @@
+v0.0.1f1-alpha
+første tal - selv valgt (baseret på hvad vi føler er stort)
+andet tal - increment for hver epic fuldført
+tredje tal - increment for hver story fuldført
+fjerde tal efter f - increment for hver task fuldført (completed stories reset counter no matter what)
