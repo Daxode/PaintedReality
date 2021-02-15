@@ -1042,7 +1042,7 @@ Transform:
   m_LocalScale: {x: 13.686738, y: 13.686738, z: 13.686738}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &219732396
 PrefabInstance:
@@ -1267,7 +1267,7 @@ Transform:
   - {fileID: 586452956}
   - {fileID: 296712177}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245994417
 GameObject:
@@ -1300,7 +1300,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &245994419
 MonoBehaviour:
@@ -1510,247 +1510,6 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!1 &257446920
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 257446924}
-  - component: {fileID: 257446923}
-  - component: {fileID: 257446922}
-  - component: {fileID: 257446921}
-  m_Layer: 0
-  m_Name: GravityField (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!114 &257446921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257446920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8022945862cf42d1abe5cce73e43dea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravType: 0
-  gravityAcceleration: {x: 2.1539018, y: 7.553364, z: 1.0013533}
-  priority: 24
---- !u!114 &257446922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257446920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccea9ea98e38942e0b0938c27ed1903e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MotionType: 2
-  m_Smoothing: 0
-  m_Mass: 1
-  m_LinearDamping: 0.01
-  m_AngularDamping: 0.05
-  m_InitialLinearVelocity:
-    x: 0
-    y: 0
-    z: 0
-  m_InitialAngularVelocity:
-    x: 0
-    y: 0
-    z: 0
-  m_GravityFactor: 1
-  m_OverrideDefaultMassDistribution: 0
-  m_CenterOfMass:
-    x: 0
-    y: 0
-    z: 0
-  m_Orientation:
-    Value:
-      x: 0
-      y: 0
-      z: 0
-    RotationOrder: 4
-  m_InertiaTensor:
-    x: 0.4
-    y: 0.4
-    z: 0.4
-  m_CustomTags:
-    Tag00: 0
-    Tag01: 0
-    Tag02: 0
-    Tag03: 0
-    Tag04: 0
-    Tag05: 0
-    Tag06: 0
-    Tag07: 0
---- !u!114 &257446923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257446920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShapeType: 0
-  m_PrimitiveCenter:
-    x: 0
-    y: 0
-    z: 0
-  m_PrimitiveSize:
-    x: 10
-    y: 10
-    z: 10
-  m_PrimitiveOrientation:
-    Value:
-      x: -0
-      y: 0
-      z: 0
-    RotationOrder: 4
-  m_Capsule:
-    Height: 10
-    Radius: 5
-    Axis: 1
-  m_Cylinder:
-    Height: 10
-    Radius: 5
-    Axis: 2
-  m_CylinderSideCount: 20
-  m_SphereRadius: 5
-  m_MinimumSkinnedVertexWeight: 0.1
-  m_ConvexHullGenerationParameters:
-    m_SimplificationTolerance: 0.015
-    m_BevelRadius: 0
-    m_MinimumAngle: 2.5000002
-  m_CustomMesh: {fileID: 0}
-  m_ForceUnique: 0
-  m_Material:
-    m_SupportsTemplate: 1
-    m_Template: {fileID: 0}
-    m_CollisionResponse:
-      m_Override: 0
-      m_Value: 3
-    m_Friction:
-      m_Override: 0
-      m_Value:
-        Value: 0.5
-        CombineMode: 0
-    m_Restitution:
-      m_Override: 0
-      m_Value:
-        Value: 0
-        CombineMode: 2
-    m_BelongsToCategories:
-      m_Override: 0
-      m_Value:
-        Category00: 0
-        Category01: 1
-        Category02: 0
-        Category03: 0
-        Category04: 0
-        Category05: 0
-        Category06: 0
-        Category07: 0
-        Category08: 0
-        Category09: 0
-        Category10: 0
-        Category11: 0
-        Category12: 0
-        Category13: 0
-        Category14: 0
-        Category15: 0
-        Category16: 0
-        Category17: 0
-        Category18: 0
-        Category19: 0
-        Category20: 0
-        Category21: 0
-        Category22: 0
-        Category23: 0
-        Category24: 0
-        Category25: 0
-        Category26: 0
-        Category27: 0
-        Category28: 0
-        Category29: 0
-        Category30: 0
-        Category31: 0
-    m_CollidesWithCategories:
-      m_Override: 0
-      m_Value:
-        Category00: 1
-        Category01: 1
-        Category02: 1
-        Category03: 1
-        Category04: 1
-        Category05: 1
-        Category06: 1
-        Category07: 1
-        Category08: 1
-        Category09: 1
-        Category10: 1
-        Category11: 1
-        Category12: 1
-        Category13: 1
-        Category14: 1
-        Category15: 1
-        Category16: 1
-        Category17: 1
-        Category18: 1
-        Category19: 1
-        Category20: 1
-        Category21: 1
-        Category22: 1
-        Category23: 1
-        Category24: 1
-        Category25: 1
-        Category26: 1
-        Category27: 1
-        Category28: 1
-        Category29: 1
-        Category30: 1
-        Category31: 1
-    m_CustomMaterialTags:
-      m_Override: 0
-      m_Value:
-        Tag00: 0
-        Tag01: 0
-        Tag02: 0
-        Tag03: 0
-        Tag04: 0
-        Tag05: 0
-        Tag06: 0
-        Tag07: 0
-    m_SerializedVersion: 1
-  m_SerializedVersion: 1
---- !u!4 &257446924
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257446920}
-  m_LocalRotation: {x: 0.15028982, y: -0.5415196, z: -0.4638311, w: 0.6848578}
-  m_LocalPosition: {x: -3.63, y: -8.2, z: -13.66}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -17.247, y: -67.314, z: -56.685}
 --- !u!1001 &276683957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,7 +2098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravType: 1
   gravityAcceleration: {x: 0, y: -9.82, z: 0}
-  priority: 99
+  priority: 11
 --- !u!114 &287788696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,9 +2167,9 @@ MonoBehaviour:
     y: 0
     z: 0
   m_PrimitiveSize:
-    x: 35.12
-    y: 35.12
-    z: 35.12
+    x: 24.58
+    y: 24.58
+    z: 24.58
   m_PrimitiveOrientation:
     Value:
       x: -0
@@ -2418,15 +2177,15 @@ MonoBehaviour:
       z: 0
     RotationOrder: 4
   m_Capsule:
-    Height: 35.12
-    Radius: 17.56
+    Height: 24.58
+    Radius: 12.29
     Axis: 2
   m_Cylinder:
-    Height: 35.12
-    Radius: 17.56
+    Height: 24.58
+    Radius: 12.29
     Axis: 2
   m_CylinderSideCount: 20
-  m_SphereRadius: 17.56
+  m_SphereRadius: 12.29
   m_MinimumSkinnedVertexWeight: 0.1
   m_ConvexHullGenerationParameters:
     m_SimplificationTolerance: 0.015
@@ -2545,7 +2304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &296712176
 PrefabInstance:
@@ -3007,7 +2766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravType: 1
   gravityAcceleration: {x: 0, y: -9.82, z: 0}
-  priority: 99
+  priority: 11
 --- !u!114 &328058073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3076,9 +2835,9 @@ MonoBehaviour:
     y: 0
     z: 0
   m_PrimitiveSize:
-    x: 35.12
-    y: 35.12
-    z: 35.12
+    x: 25
+    y: 25
+    z: 25
   m_PrimitiveOrientation:
     Value:
       x: -0
@@ -3086,15 +2845,15 @@ MonoBehaviour:
       z: 0
     RotationOrder: 4
   m_Capsule:
-    Height: 35.12
-    Radius: 17.56
+    Height: 25
+    Radius: 12.5
     Axis: 2
   m_Cylinder:
-    Height: 35.12
-    Radius: 17.56
+    Height: 25
+    Radius: 12.5
     Axis: 2
   m_CylinderSideCount: 20
-  m_SphereRadius: 17.56
+  m_SphereRadius: 12.5
   m_MinimumSkinnedVertexWeight: 0.1
   m_ConvexHullGenerationParameters:
     m_SimplificationTolerance: 0.015
@@ -3213,7 +2972,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &340180962
 PrefabInstance:
@@ -4283,7 +4042,7 @@ Transform:
   m_LocalScale: {x: 13.686738, y: 13.686738, z: 13.686738}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &540930130 stripped
 Transform:
@@ -4822,7 +4581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravType: 1
   gravityAcceleration: {x: 0, y: -9.82, z: 0}
-  priority: 99
+  priority: 11
 --- !u!114 &588931809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4891,9 +4650,9 @@ MonoBehaviour:
     y: 0
     z: 0
   m_PrimitiveSize:
-    x: 35.12
-    y: 35.12
-    z: 35.12
+    x: 24.58
+    y: 24.58
+    z: 24.58
   m_PrimitiveOrientation:
     Value:
       x: -0
@@ -4901,15 +4660,15 @@ MonoBehaviour:
       z: 0
     RotationOrder: 4
   m_Capsule:
-    Height: 35.12
-    Radius: 17.56
+    Height: 24.58
+    Radius: 12.29
     Axis: 2
   m_Cylinder:
-    Height: 35.12
-    Radius: 17.56
+    Height: 24.58
+    Radius: 12.29
     Axis: 2
   m_CylinderSideCount: 20
-  m_SphereRadius: 17.56
+  m_SphereRadius: 12.29
   m_MinimumSkinnedVertexWeight: 0.1
   m_ConvexHullGenerationParameters:
     m_SimplificationTolerance: 0.015
@@ -5028,7 +4787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &611079274
 PrefabInstance:
@@ -6661,7 +6420,7 @@ Transform:
   m_LocalScale: {x: 13.686738, y: 13.686738, z: 13.686738}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &777990099
 PrefabInstance:
@@ -8921,7 +8680,7 @@ Transform:
   m_LocalScale: {x: 13.686738, y: 13.686738, z: 13.686738}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1307623207
 PrefabInstance:
@@ -12596,7 +12355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 18.025, y: 0, z: 0}
 --- !u!4 &2041708174 stripped
 Transform:
@@ -12636,7 +12395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravType: 1
   gravityAcceleration: {x: 0, y: -9.82, z: 0}
-  priority: 99
+  priority: 1
 --- !u!114 &2053346940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12705,9 +12464,9 @@ MonoBehaviour:
     y: 0
     z: 0
   m_PrimitiveSize:
-    x: 35.12
-    y: 35.12
-    z: 35.12
+    x: 75.8
+    y: 75.8
+    z: 75.8
   m_PrimitiveOrientation:
     Value:
       x: -0
@@ -12715,15 +12474,15 @@ MonoBehaviour:
       z: 0
     RotationOrder: 4
   m_Capsule:
-    Height: 35.12
-    Radius: 17.56
+    Height: 75.8
+    Radius: 37.9
     Axis: 2
   m_Cylinder:
-    Height: 35.12
-    Radius: 17.56
+    Height: 75.8
+    Radius: 37.9
     Axis: 2
   m_CylinderSideCount: 20
-  m_SphereRadius: 17.56
+  m_SphereRadius: 37.9
   m_MinimumSkinnedVertexWeight: 0.1
   m_ConvexHullGenerationParameters:
     m_SimplificationTolerance: 0.015
@@ -12842,7 +12601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2062085972
 PrefabInstance:

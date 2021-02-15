@@ -16,7 +16,7 @@ namespace Imperceptible {
 		}
 
 		// Update is called once per frame
-		void Update() {
+		void LateUpdate() {
 			if (_playerEntity == Entity.Null) {
 				if (_waitTime <= 0) {
 					EntityQuery queryPlayer    = _entityManager.CreateEntityQuery(ComponentType.ReadOnly<TagPlayer>());

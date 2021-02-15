@@ -9,12 +9,9 @@ namespace Imperceptible {
 		[SerializeField] private Vector3    offsetRotation;
 
 		private Vector3 _positionVel = Vector3.zero;
-
-		// Start is called before the first frame update
-		void Start() { }
-
+		
 		// Update is called once per frame
-		void Update() {
+		void LateUpdate() {
 			var ree = target.transform.rotation*offset;
 			transform.position =
 				Vector3.SmoothDamp(transform.position, target.transform.position+new Vector3(ree.x,ree.y,ree.z), ref _positionVel, 0.1f);
