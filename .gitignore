@@ -16,6 +16,9 @@ Assets/Plugins/Editor/JetBrains*
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/SceneDependencyCache*
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
 
 # Visual Studio cache directory
 .vs/
