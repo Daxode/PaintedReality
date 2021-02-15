@@ -7,8 +7,8 @@ namespace Imperceptible.Systems.GravityFields {
 	[UpdateAfter(typeof(GFTrigger))]
 	public class GFApplyPriorityField : SystemBase {
 		protected override void OnUpdate() {
-			var gravFields = GetComponentDataFromEntity<ComponentGravityField>();
-			Entities.ForEach((ref DynamicBuffer<DynamicBufferEntityElement> buffer, ref ComponentGravityFieldAttracted gravityFieldAttracted) => {
+			var gravFields = GetComponentDataFromEntity<GravityField>();
+			Entities.ForEach((ref DynamicBuffer<DynamicBufferEntityElement> buffer, ref GravityFieldAttracted gravityFieldAttracted) => {
 				int max = -1;
 				gravityFieldAttracted.GravityFieldCurrentEntity = Entity.Null;
 				foreach (var entity in buffer) {

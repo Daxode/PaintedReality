@@ -19,7 +19,7 @@ namespace Imperceptible.Systems.GravityFields {
 		}
 
 		struct SystemJobOnTriggerGravityField : ITriggerEventsJob {
-			public ComponentDataFromEntity<ComponentGravityFieldAttracted> AllGravityAffectables;
+			public ComponentDataFromEntity<GravityFieldAttracted> AllGravityAffectables;
 			public BufferFromEntity<DynamicBufferEntityElement> BufferOfGravityAffectEntities;
 		
 			public void Execute(TriggerEvent triggerEvent) {
@@ -27,17 +27,15 @@ namespace Imperceptible.Systems.GravityFields {
 				var entityB = triggerEvent.EntityB;
 			
 				if (AllGravityAffectables.HasComponent(entityA)) {
-					Debug.Log($"{entityA} - {entityB}");
-					
 					var entityAffectedByGravityFieldsGravityAttractionComponent = BufferOfGravityAffectEntities[entityA];
 					entityAffectedByGravityFieldsGravityAttractionComponent.Add(entityB);
 				}
 			}
 		}
-	
+
 		protected override JobHandle OnUpdate(JobHandle inputDeps) {
 			var job = new SystemJobOnTriggerGravityField();
-			job.AllGravityAffectables = GetComponentDataFromEntity<ComponentGravityFieldAttracted>();
+			job.AllGravityAffectables = GetComponentDataFromEntity<GravityFieldAttracted>();
 			job.BufferOfGravityAffectEntities = GetBufferFromEntity<DynamicBufferEntityElement>();
 
 			var jobHandle = job.Schedule(_stepPhysicsWorld.Simulation, ref _buildPhysicsWorld.PhysicsWorld, inputDeps);

@@ -12,16 +12,17 @@ namespace Imperceptible.Components.Authoring {
 		[SerializeField] private Vector3          gravityAcceleration;
 		[SerializeField] private int              priority;
 
-		public GravityFieldType GravType            => gravType;
+		public GravityFieldType GravType => gravType;
+
 		public Vector3 GravityAcceleration {
 			get => gravityAcceleration;
 			set => gravityAcceleration = value;
 		}
 
-		public int              Priority            => priority;
+		public int Priority => priority;
 
 		public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem) {
-			dstManager.AddComponentData(entity, new ComponentGravityField {
+			dstManager.AddComponentData(entity, new GravityField {
 				GravityFieldType = gravType,
 				GravityAcceleration = gravityAcceleration,
 				Priority = priority
@@ -43,6 +44,7 @@ namespace Imperceptible.Components.Authoring {
 
 
 		private static AuthorComponentGravityField[] gravFields;
+
 		public static void OnUpdateGravityFieldViewer() {
 			gravFields = FindObjectsOfType<AuthorComponentGravityField>();
 			_priorities.Clear();
@@ -58,14 +60,14 @@ namespace Imperceptible.Components.Authoring {
 
 
 			var index           = _priorities.TakeWhile(priorityLoop => Priority != priorityLoop).Count();
-			var priorityPercent = index / (float) (_priorities.Count-1);
-				
-			Gizmos.color = priorityPercent < .5 ? 
-				Color.Lerp (Color.green, Color.yellow, priorityPercent*2) : 
-				Color.Lerp (Color.yellow, Color.red, (priorityPercent-.5f)*2);
+			var priorityPercent = index / (float) (_priorities.Count - 1);
+
+			Gizmos.color = priorityPercent < .5
+				? Color.Lerp(Color.green, Color.yellow, priorityPercent * 2)
+				: Color.Lerp(Color.yellow, Color.red, (priorityPercent - .5f) * 2);
 
 			Gizmos.DrawRay(Vector3.zero, GravityAcceleration);
-			
+
 			switch (gravType) {
 				case GravityFieldType.Parallel:
 					Gizmos.DrawWireCube(Vector3.zero, physShape.GetBoxProperties().Size);
@@ -76,6 +78,6 @@ namespace Imperceptible.Components.Authoring {
 					break;
 			}
 		}
-#endif	
+#endif
 	}
 }

@@ -7,7 +7,6 @@ namespace Imperceptible.Systems.GravityFields {
 	[UpdateBefore(typeof(GFTrigger))]
 	public class GFClearBuffers : SystemBase {
 		protected override void OnUpdate() {
-			var gravFields = GetComponentDataFromEntity<ComponentGravityField>();
 			Entities.ForEach((ref DynamicBuffer<DynamicBufferEntityElement> buffer) => {
 				buffer.Clear();
 			}).Schedule();
