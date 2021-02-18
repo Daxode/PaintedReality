@@ -24,7 +24,7 @@ namespace Imperceptible.Systems {
                         livingJumper.InitialJump = false;
                         
                         Debug.Log("Do initial jump");
-                        physicsVelocity.Linear += ltw.Up * 30; //Applies a jump
+                        physicsVelocity.Linear += ltw.Up * 20; //Applies a jump
                     }
                 }
 
