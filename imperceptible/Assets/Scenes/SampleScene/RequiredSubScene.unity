@@ -430,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GravityFieldCurrentEntity: {fileID: 0}
   IsOnGround: 0
+  AffectanceRate: 10
 --- !u!114 &1820042818
 MonoBehaviour:
   m_ObjectHideFlags: 0

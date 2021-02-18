@@ -2,9 +2,7 @@ using Imperceptible.Components;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
-using Unity.Physics.Extensions;
 using Unity.Transforms;
-using UnityEngine;
 
 namespace Imperceptible.Systems.GravityFields {
 	public class GFPull : SystemBase {
@@ -22,7 +20,7 @@ namespace Imperceptible.Systems.GravityFields {
 				var gravityFieldLTW = allLocalToWorld[componentGravityFieldTarget.GravityFieldCurrentEntity];
 
 				float3 gravity   = gravityField.GravityAcceleration;
-				float3 direction = new float3(0, 1, 0);
+				float3 direction = new float3( 0, 1, 0);
 
 				switch (gravityField.GravityFieldType) {
 					case GravityFieldType.Parallel:
@@ -43,7 +41,7 @@ namespace Imperceptible.Systems.GravityFields {
 				var inertiaOrientationInWorldSpace = math.mul(ltw.Rotation.value, physicsMass.InertiaOrientation);
 				var angularVelocityInertiaSpace =
 					math.rotate(math.inverse(inertiaOrientationInWorldSpace), angularMoveDir);
-				physicsVelocity.Angular += angularVelocityInertiaSpace * timeDelta * physicsMass.InverseInertia * 10;
+				physicsVelocity.Angular += angularVelocityInertiaSpace * timeDelta * physicsMass.InverseInertia * componentGravityFieldTarget.AffectanceRate;
 			}).Schedule();
 		}
 	}

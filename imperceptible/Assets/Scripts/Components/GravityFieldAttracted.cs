@@ -8,5 +8,6 @@ namespace Imperceptible.Components {
 	public struct GravityFieldAttracted : IComponentData {
 		public Entity GravityFieldCurrentEntity;
 		public bool   IsOnGround;
+		public float  AffectanceRate;
 	}
 }
