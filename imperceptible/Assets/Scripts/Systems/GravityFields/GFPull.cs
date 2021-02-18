@@ -41,7 +41,7 @@ namespace Imperceptible.Systems.GravityFields {
 				var inertiaOrientationInWorldSpace = math.mul(ltw.Rotation.value, physicsMass.InertiaOrientation);
 				var angularVelocityInertiaSpace =
 					math.rotate(math.inverse(inertiaOrientationInWorldSpace), angularMoveDir);
-				physicsVelocity.Angular += angularVelocityInertiaSpace * timeDelta * physicsMass.InverseInertia * componentGravityFieldTarget.AffectanceRate;
+				physicsVelocity.Angular += angularVelocityInertiaSpace * timeDelta * physicsMass.InverseInertia * componentGravityFieldTarget.AngularVelocityAffectanceRate;
 			}).Schedule();
 		}
 	}

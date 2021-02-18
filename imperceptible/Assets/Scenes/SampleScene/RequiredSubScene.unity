@@ -388,9 +388,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1820042816}
   - component: {fileID: 1820042818}
-  - component: {fileID: 1820042817}
-  - component: {fileID: 1820042820}
-  - component: {fileID: 1820042821}
   - component: {fileID: 1820042822}
   m_Layer: 0
   m_Name: Player
@@ -416,21 +413,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1820042817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820042815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73973bb0879090a4abd04880ddfcec22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GravityFieldCurrentEntity: {fileID: 0}
-  IsOnGround: 0
-  AffectanceRate: 10
 --- !u!114 &1820042818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,38 +463,6 @@ MonoBehaviour:
     Tag05: 0
     Tag06: 0
     Tag07: 0
---- !u!114 &1820042820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820042815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3355799b19714f98bf2f170b526937c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1820042821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820042815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c246367934ee4b5cb537126f7fe2c95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HasHitGround: 1
-  Jumps: 2
-  JumpsLeft: 0
-  JumpTime: 2
-  JumpTimeLeft: 0
-  IsJumping: 0
-  IsGoingUp: 0
-  InitialJump: 0
 --- !u!114 &1820042822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3718c8f2bc1e46fba364ddffe74a67e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularVelocityAffectanceRate: 10
 --- !u!1 &1825487066
 GameObject:
   m_ObjectHideFlags: 0

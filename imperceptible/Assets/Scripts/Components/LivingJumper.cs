@@ -1,7 +1,6 @@
 using Unity.Entities;
 
 namespace Imperceptible.Components {
-	[GenerateAuthoringComponent]
 	public struct LivingJumper : IComponentData {
 		public bool  HasHitGround;
 		public int   Jumps;

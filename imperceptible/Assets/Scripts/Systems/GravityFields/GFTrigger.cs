@@ -1,4 +1,5 @@
 using Imperceptible.Components;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
@@ -19,24 +20,24 @@ namespace Imperceptible.Systems.GravityFields {
 		}
 
 		struct SystemJobOnTriggerGravityField : ITriggerEventsJob {
-			public ComponentDataFromEntity<GravityFieldAttracted> AllGravityAffectables;
+			[ReadOnly] public ComponentDataFromEntity<GravityFieldAttracted> AllGravityAffectables;
 			public BufferFromEntity<DynamicBufferEntityElement> BufferOfGravityAffectEntities;
 		
 			public void Execute(TriggerEvent triggerEvent) {
 				var entityA = triggerEvent.EntityA;
 				var entityB = triggerEvent.EntityB;
 			
-				if (AllGravityAffectables.HasComponent(entityA)) {
-					var entityAffectedByGravityFieldsGravityAttractionComponent = BufferOfGravityAffectEntities[entityA];
-					entityAffectedByGravityFieldsGravityAttractionComponent.Add(entityB);
+				if (AllGravityAffectables.HasComponent(entityA)) { 
+					BufferOfGravityAffectEntities[entityA].Add(entityB);
 				}
 			}
 		}
 
 		protected override JobHandle OnUpdate(JobHandle inputDeps) {
-			var job = new SystemJobOnTriggerGravityField();
-			job.AllGravityAffectables = GetComponentDataFromEntity<GravityFieldAttracted>();
-			job.BufferOfGravityAffectEntities = GetBufferFromEntity<DynamicBufferEntityElement>();
+			var job = new SystemJobOnTriggerGravityField() {
+				AllGravityAffectables = GetComponentDataFromEntity<GravityFieldAttracted>(true),
+				BufferOfGravityAffectEntities = GetBufferFromEntity<DynamicBufferEntityElement>()
+			};
 
 			var jobHandle = job.Schedule(_stepPhysicsWorld.Simulation, ref _buildPhysicsWorld.PhysicsWorld, inputDeps);
 			jobHandle.Complete();
