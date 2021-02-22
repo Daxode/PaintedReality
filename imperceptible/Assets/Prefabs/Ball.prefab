@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GravityFieldCurrentEntity: {fileID: 0}
   IsOnGround: 0
+  AngularVelocityAffectanceRate: 0
 --- !u!114 &8747940976152339067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ MonoBehaviour:
     m_Template: {fileID: 0}
     m_CollisionResponse:
       m_Override: 0
-      m_Value: 1
+      m_Value: 0
     m_Friction:
       m_Override: 0
       m_Value:
@@ -270,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ba1a5a3b3f41d1041918aaaf5d982ceb, type: 2}
+  - {fileID: 2100000, guid: 5b0758bcab66c704eb09f12d7f1b862b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
