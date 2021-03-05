@@ -1,0 +1,4 @@
+HDRenderPipeline.cs:
+- renderRequests
+- renderPipelineResources
+- m_DefaultAsset
